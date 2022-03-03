@@ -1,4 +1,4 @@
-import { getAllPostsData } from "../../nextjs-lesson-hp/lib/posts"
+import { getAllPostData } from "../lib/posts";
 import Layout from "../components/Layout"
 import Post from "../components/Post";
 
@@ -13,7 +13,7 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPostsData();
+  const posts = await getAllPostData();
   return {
     props: { posts }
   };
